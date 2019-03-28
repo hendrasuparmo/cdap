@@ -453,7 +453,7 @@ class RemoteExecutionTwillPreparer implements TwillPreparer {
           session.copy(new ByteArrayInputStream(scriptContent),
                        targetPath, "launcher.sh", scriptContent.length, 0755, null, null);
 
-          LOG.info("Starting runnable {} with SSH on {}", runnableName, session.getAddress().getHostName());
+          LOG.info("Starting runnable {} with SSH", runnableName);
 
           // Create the controller first. If the creation failed, the process won't get started.
           RemoteExecutionTwillController controller = controllerFactory.create();
